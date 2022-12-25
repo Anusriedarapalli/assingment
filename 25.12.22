@@ -1,0 +1,185 @@
+#palindrome or not
+n=int(input())
+sum=0
+a=n
+while(n!=0):
+    r=n%10
+    sum=(sum*10)+r
+    n=n//10
+if sum==a:
+    print('palindrome')
+else:
+    print("not a palindrome")
+    
+#leap year or not
+n=int(input())
+if n%400==0:
+    print("leap year")
+elif n%4==0 and n%100!=0:
+    print('leap year')
+else:
+    print("not a leap year")
+    
+#fibnoccie n series
+n=int(input())
+a=-1
+b=1
+for i in range(1,n+1):
+    c=a+b
+    print(c)
+    a=b
+    b=c
+    
+#program-4
+l=list(map(int,input().split()))
+for i in l:
+    a=max(l)
+    b=min(l)
+print("Maximum:",a)
+print("Minimum:",b)
+
+#program-5
+n=int(input())
+f=0
+for i in range(1,n+1):
+    if(n%i==0):
+        f=f+1
+if f==2:
+    print("Prime")
+else:
+    print("Not Prime")
+    
+#program-6
+def ishappy(n):
+    s=0
+    while(n>0):
+        r=n%10
+        s=s+(r*r)
+        n=n//10
+    return s
+n=int(input())
+while(n>9):
+    n=ishappy(n)
+if n==1 or n==7:
+    print("Happy Number")
+else:
+    print("Not a Happy Number")
+    
+#program-7
+n = int(input())
+s = 0
+for i in range(1, n):
+    if(n % i == 0):
+        s = s + i
+if (s == n):
+    print("Perfect number")
+else:
+    print("Not a Perfect number")
+    
+#program-8
+start=int(input())
+end=int(input())
+start=start+1
+count=0
+for i in range(start,end):
+    if (i%4==0 and i%100!=0) or (i%400==0):
+        print(i,end=' ')
+        count=count+1
+print()
+print('Count of leap years in given range:',count)
+
+#program-9
+n=int(input())
+a=-1
+b=1
+s=0
+for i in range(1,n+1):
+    c=a+b
+    s=s+c
+    print(c)
+    a=b
+    b=c
+print()
+print('Sum of Fibonacci:',s)
+
+#program-10
+def isprime(n):
+    c=0
+    for i in range(1,n+1):
+        if n%i==0:
+            c=c+1
+    return c
+start=int(input())
+end=int(input())
+pc=0
+for i in range(start+1,end):
+    if(isprime(i)==2):
+        pc=pc+1
+print("Prime Count:",pc)
+
+#program-11
+n=int(input())
+list = []
+sum = 0
+for i in range(2,n+1):
+    for j in range(2,i):
+        if i%j==0:
+            break
+    else:
+        sum=sum+i
+print("Sum of primes=",sum)
+
+#program-12
+n=int(input())
+f=1
+for i in range(1,n+1):
+    f=f*i
+print("Factorial Value=",f)
+
+#program-13
+n=int(input())
+l=list(map(int,input().split()))
+c=0
+for i in range(n):
+    for j in range(i+1,n):
+        if l[i]==l[j]:
+            c=1
+            break
+if c==0:
+    print("Unique")
+else:
+    print('Duplicate')
+    
+#program-14
+def ishappy(n):
+    s=0
+    while(n>0):
+        r=n%10
+        s=s+(r*r)
+        n=n//10
+    return s
+n=int(input())
+while(n>9):
+    n=ishappy(n)
+if n==1 or n==7:
+    print("Happy Number")
+else:
+    print("Not a Happy Number")
+    
+#program-15
+n=int(input())
+l=list(map(int,input().split()))
+ul=[]
+for i in l:
+    if i not in ul:
+        ul.append(i)
+for i in ul:
+    print(i,end=' ')
+
+#program-16
+n=int(input())
+l=list(map(int,input().split()))
+big=max(l)
+small=min(l)
+print(big-small)
+    
